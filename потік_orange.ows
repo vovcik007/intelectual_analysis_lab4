@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="ЛР4 — Лопатін Володимир — варіант 12" description="Буряк, Zakarpattia; 46 місяців; ARIMA(1,1,1), 7 фолдів × 3 кроки.">
+	<nodes>
+		<node id="0" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="" version="" title="File" position="(0, 200)" />
+		<node id="1" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="" version="" title="Select Columns" position="(180, 200)" />
+		<node id="2" name="Form Timeseries" qualified_name="orangecontrib.timeseries.widgets.owtabletotimeseries.OWTableToTimeseries" project_name="" version="" title="Form Timeseries" position="(360, 200)" />
+		<node id="3" name="Interpolate" qualified_name="orangecontrib.timeseries.widgets.owinterpolate.OWInterpolate" project_name="" version="" title="Interpolate" position="(550, 200)" />
+		<node id="4" name="Line Chart" qualified_name="orangecontrib.timeseries.widgets.owlinechart.OWLineChart" project_name="" version="" title="Line Chart" position="(760, 20)" />
+		<node id="5" name="Correlogram" qualified_name="orangecontrib.timeseries.widgets.owcorrelogram.OWCorrelogram" project_name="" version="" title="Correlogram" position="(760, 180)" />
+		<node id="6" name="Difference" qualified_name="orangecontrib.timeseries.widgets.owdifference.OWDifference" project_name="" version="" title="Difference" position="(760, 340)" />
+		<node id="7" name="Correlogram" qualified_name="orangecontrib.timeseries.widgets.owcorrelogram.OWCorrelogram" project_name="" version="" title="Correlogram" position="(1180, 340)" />
+		<node id="8" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="" version="" title="Python Script" position="(970, 340)" />
+		<node id="9" name="Seasonal Adjustment" qualified_name="orangecontrib.timeseries.widgets.owseasonaladjustment.OWSeasonalAdjustment" project_name="" version="" title="Seasonal Adjustment" position="(760, 510)" />
+		<node id="10" name="Line Chart" qualified_name="orangecontrib.timeseries.widgets.owlinechart.OWLineChart" project_name="" version="" title="Line Chart" position="(1180, 510)" />
+		<node id="11" name="ARIMA Model" qualified_name="orangecontrib.timeseries.widgets.owarimamodel.OWARIMAModel" project_name="" version="" title="ARIMA Model" position="(550, -20)" />
+		<node id="12" name="Model Evaluation" qualified_name="orangecontrib.timeseries.widgets.owmodelevaluation.OWModelEvaluation" project_name="" version="" title="Model Evaluation" position="(980, -20)" />
+		<node id="13" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="" version="" title="Python Script" position="(550, 510)" />
+		<node id="14" name="Form Timeseries" qualified_name="orangecontrib.timeseries.widgets.owtabletotimeseries.OWTableToTimeseries" project_name="" version="" title="Form Timeseries" position="(970, 510)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="2" source_node_id="2" sink_node_id="3" source_channel="Time series" sink_channel="Time series" enabled="true" source_channel_id="time_series" sink_channel_id="time_series" />
+		<link id="3" source_node_id="3" sink_node_id="4" source_channel="Interpolated time series" sink_channel="Time series" enabled="true" source_channel_id="interpolated" sink_channel_id="time_series" />
+		<link id="4" source_node_id="3" sink_node_id="5" source_channel="Interpolated time series" sink_channel="Time series" enabled="true" source_channel_id="interpolated" sink_channel_id="time_series" />
+		<link id="5" source_node_id="3" sink_node_id="6" source_channel="Interpolated time series" sink_channel="Time series" enabled="true" source_channel_id="interpolated" sink_channel_id="time_series" />
+		<link id="6" source_node_id="3" sink_node_id="11" source_channel="Interpolated time series" sink_channel="Time series" enabled="true" source_channel_id="interpolated" sink_channel_id="time_series" />
+		<link id="7" source_node_id="3" sink_node_id="12" source_channel="Interpolated time series" sink_channel="Time series" enabled="true" source_channel_id="interpolated" sink_channel_id="time_series" />
+		<link id="8" source_node_id="6" sink_node_id="8" source_channel="Time series" sink_channel="Data" enabled="true" source_channel_id="time_series" sink_channel_id="data" />
+		<link id="9" source_node_id="8" sink_node_id="7" source_channel="Data" sink_channel="Time series" enabled="true" source_channel_id="data" sink_channel_id="time_series" />
+		<link id="10" source_node_id="11" sink_node_id="12" source_channel="Time series model" sink_channel="Time series model" enabled="true" source_channel_id="learner" sink_channel_id="time_series_model" />
+		<link id="11" source_node_id="3" sink_node_id="13" source_channel="Interpolated time series" sink_channel="Data" enabled="true" source_channel_id="interpolated" sink_channel_id="data" />
+		<link id="12" source_node_id="13" sink_node_id="9" source_channel="Data" sink_channel="Time series" enabled="true" source_channel_id="data" sink_channel_id="time_series" />
+		<link id="13" source_node_id="9" sink_node_id="14" source_channel="Time series" sink_channel="Data" enabled="true" source_channel_id="time_series" sink_channel_id="data" />
+		<link id="14" source_node_id="14" sink_node_id="10" source_channel="Time series" sink_channel="Time series" enabled="true" source_channel_id="time_series" sink_channel_id="time_series" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASVngIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZSMHm9y
+YW5nZXdpZGdldC51dGlscy5maWxlZGlhbG9nc5SMClJlY2VudFBhdGiUk5QpgZR9lCiMB2Fic3Bh
+dGiUjEJEOi92b2xvZHlhX3VuaS9pbnRlbGVjdHVhbF9hbmFseXNpcy9sYWJfNC/RgNGP0LRf0LTQ
+u9GPX29yYW5nZS5jc3aUjAZwcmVmaXiUjAdiYXNlZGlylIwHcmVscGF0aJSMGNGA0Y/QtF/QtNC7
+0Y9fb3JhbmdlLmNzdpSMBXRpdGxllIwAlIwFc2hlZXSUaBCMC2ZpbGVfZm9ybWF0lE51YmGMC3Jl
+Y2VudF91cmxzlF2UjBNzYXZlZFdpZGdldEdlb21ldHJ5lE6MC3NoZWV0X25hbWVzlH2UjAZzb3Vy
+Y2WUSwCMA3VybJRoEIwNZG9tYWluX2VkaXRvcpR9lIwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRf
+c2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZh
+bHVlc5R9lCiMCXZhcmlhYmxlc5RdlGgafZRoJl2UKF2UKIwEZGF0ZZSMFE9yYW5nZS5kYXRhLnZh
+cmlhYmxllIwMVGltZVZhcmlhYmxllJOUSwBoEIhlXZQojAVwcmljZZRoLIwSQ29udGludW91c1Zh
+cmlhYmxllJOUSwBoEIhlZXNoHEsBdYwKYXR0cmlidXRlc5SMBGRhdGWUSwSGlIwFcHJpY2WUSwKG
+lIaUjAVtZXRhc5QpjApjbGFzc192YXJzlCmMEm1vZGlmaWVkX3ZhcmlhYmxlc5RdlHViYXUu
+</properties>
+		<properties node_id="1" format="pickle">gASVQQEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUTowSdXNlX2lucHV0X2ZlYXR1
+cmVzlImMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UjBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21haW5fcm9sZV9oaW50
+c5R9lCiMBXByaWNllEsChpSMBWNsYXNzlEsAhpSMBGRhdGWUSwSGlIwEbWV0YZRLAIaUdUr+////
+hpRoBksBdYwKYXR0cmlidXRlc5R9lChoFksEaBJLAnWMBW1ldGFzlH2UdWJhdS4=
+</properties>
+		<properties node_id="2" format="literal">{'attribute': 'date', 'autocommit': True, 'controlAreaVisible': True, 'implied_sequence': 0, 'include_extra_part': True, 'savedWidgetGeometry': None, 'start_date': (2000, 1, 1), 'start_time': (0, 0, 0), 'steps': 1, 'unit': 'Seconds', '__version__': 1}</properties>
+		<properties node_id="3" format="literal">{'autoapply': True, 'controlAreaVisible': True, 'interpolation': 0, 'multivariate': False, 'savedWidgetGeometry': None, '__version__': 2}</properties>
+		<properties node_id="4" format="pickle">gASV9QEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lE6MC19fdmVyc2lvbl9flEsCjBBjb250ZXh0X3NldHRpbmdzlF2UjBVvcmFuZ2V3aWRnZXQuc2V0
+dGluZ3OUjAdDb250ZXh0lJOUKYGUfZSMBnZhbHVlc5R9lCiMBWF0dHJzlF2UXZSMFE9yYW5nZS5k
+YXRhLnZhcmlhYmxllIwNbWFrZV92YXJpYWJsZZSTlGgQjBJDb250aW51b3VzVmFyaWFibGWUk5RO
+jAVwcmljZZSHlFKUfZQojAVfbmFtZZRoFYwOX2NvbXB1dGVfdmFsdWWUTowLdW5rbm93bl9zdHKU
+j5QojACUTowDbmFulIwCTkGUR3/4AAAAAAAAjAEulIwBP5SMAX6UkIwPc291cmNlX3ZhcmlhYmxl
+lE6MBnNwYXJzZZSJjAphdHRyaWJ1dGVzlH2UjA9fbWF4X3JvdW5kX2RpZmaURz2l/X/heWSVjBNf
+bnVtYmVyX29mX2RlY2ltYWxzlEsFjA9hZGp1c3RfZGVjaW1hbHOUSwGMC19mb3JtYXRfc3RylIwE
+JS41ZpR1YmFhjAhpc19sb2dpdJRdlIlhjAlwbG90X3R5cGWUXZSMBGxpbmWUYWgDSwJ1c2JhdS4=
+</properties>
+		<properties node_id="5" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': None, 'selection': ['price'], 'use_confint': True, 'use_pacf': False, '__version__': 1}</properties>
+		<properties node_id="6" format="literal">{'assume_zero_before': False, 'autocommit': True, 'controlAreaVisible': True, 'invert_direction': False, 'operation': 0, 'savedWidgetGeometry': None, 'selection': ['price'], 'shift_period': 1, '__version__': 1}</properties>
+		<properties node_id="7" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': None, 'selection': ['Δprice'], 'use_confint': True, 'use_pacf': False, '__version__': 1}</properties>
+		<properties node_id="8" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': None, 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': "import numpy as np\n# Першу невизначену різницю вилучаємо, як s.diff().dropna() у Python.\nout_data = None\nif in_data is not None and 'Δprice' in in_data.domain:\n    out_data = in_data[np.isfinite(in_data.get_column('Δprice'))]\n", 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xaf\x00\x00\x00i\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="9" format="pickle">gASVowEAAAAAAAB9lCiMCmF1dG9jb21taXSUiYwSY29udHJvbEFyZWFWaXNpYmxllIiMDWRlY29t
+cG9zaXRpb26USwCMCW5fcGVyaW9kc5RLDIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZROjAhzZWxlY3Rl
+ZJRdlIwUT3JhbmdlLmRhdGEudmFyaWFibGWUjA1tYWtlX3ZhcmlhYmxllJOUaAiMEkNvbnRpbnVv
+dXNWYXJpYWJsZZSTlE6MBXByaWNllIeUUpR9lCiMBV9uYW1llGgNjA5fY29tcHV0ZV92YWx1ZZRO
+jAt1bmtub3duX3N0cpSPlCiMAJROjANuYW6UjAJOQZRHf/gAAAAAAACMAS6UjAE/lIwBfpSQjA9z
+b3VyY2VfdmFyaWFibGWUTowGc3BhcnNllImMCmF0dHJpYnV0ZXOUfZSMD19tYXhfcm91bmRfZGlm
+ZpRLAIwTX251bWJlcl9vZl9kZWNpbWFsc5RLA4wPYWRqdXN0X2RlY2ltYWxzlEsCjAtfZm9ybWF0
+X3N0cpSMAiVnlHViYYwLX192ZXJzaW9uX1+USwF1Lg==
+</properties>
+		<properties node_id="10" format="pickle">gASVcQIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lE6MC19fdmVyc2lvbl9flEsCjBBjb250ZXh0X3NldHRpbmdzlF2UKIwVb3Jhbmdld2lkZ2V0LnNl
+dHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UjAZ2YWx1ZXOUfZQojAVhdHRyc5RdlF2UjBRPcmFuZ2Uu
+ZGF0YS52YXJpYWJsZZSMDW1ha2VfdmFyaWFibGWUk5RoEIwSQ29udGludW91c1ZhcmlhYmxllJOU
+TowUcHJpY2UgKHNlYXNvbi4gYWRqLimUh5RSlH2UKIwFX25hbWWUaBWMDl9jb21wdXRlX3ZhbHVl
+lE6MC3Vua25vd25fc3RylI+UKIwAlE6MA25hbpSMAk5BlEd/+AAAAAAAAIwBLpSMAT+UjAF+lJCM
+D3NvdXJjZV92YXJpYWJsZZROjAZzcGFyc2WUiYwKYXR0cmlidXRlc5R9lIwPX21heF9yb3VuZF9k
+aWZmlEsAjBNfbnVtYmVyX29mX2RlY2ltYWxzlEsDjA9hZGp1c3RfZGVjaW1hbHOUSwKMC19mb3Jt
+YXRfc3RylIwCJWeUdWJhYYwIaXNfbG9naXSUXZSJYYwJcGxvdF90eXBllF2UjARsaW5llGFoA0sC
+dXNiaAgpgZR9lGgLfZQoaA1dlF2UYWgsXZSJYWguXZRoMGFoA0sCdXNiaAgpgZR9lGgLfZQoaA1d
+lF2UYWgsXZSJYWguXZRoMGFoA0sCdXNiaAgpgZR9lGgLfZQoaA1dlF2UYWgsXZSJYWguXZRoMGFo
+A0sCdXNiZXUu
+</properties>
+		<properties node_id="11" format="literal">{'autocommit': True, 'controlAreaVisible': True, 'd': 1, 'forecast_confint': 95, 'forecast_steps': 3, 'learner_name': '', 'p': 1, 'q': 1, 'savedWidgetGeometry': None, '__version__': 1}</properties>
+		<properties node_id="12" format="literal">{'autocommit': False, 'controlAreaVisible': True, 'forecast_steps': 3, 'n_folds': 7, 'savedWidgetGeometry': None, '__version__': 1}</properties>
+		<properties node_id="13" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': None, 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': "import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable\n# Ті самі 46 цін у тому самому порядку, без успадкованих time_variable.\nout_data = None\nif in_data is not None:\n    values = in_data.get_column('price').reshape(-1, 1)\n    assert values.shape == (46, 1) and np.isfinite(values).all()\n    out_data = Table.from_numpy(Domain([ContinuousVariable('price')]), values.copy())\n", 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xaf\x00\x00\x00i\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="14" format="literal">{'attribute': 'price', 'autocommit': True, 'controlAreaVisible': True, 'implied_sequence': 1, 'include_extra_part': False, 'savedWidgetGeometry': None, 'start_date': (2014, 3, 1), 'start_time': (0, 0, 0), 'steps': 1, 'unit': 'Months', '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

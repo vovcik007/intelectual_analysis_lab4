@@ -1,0 +1,83 @@
+{
+  "mode": "Real Orange Qt widgets; automated offscreen execution; not a desktop screenshot",
+  "metrics_from_Model_Evaluation_widget": {
+    "RMSE": 2.841,
+    "MAE": 1.196,
+    "MAPE": 0.373,
+    "POCID": 60.0
+  },
+  "default_folds_error": "Unexpected error: Supplied time series is too short for this many folds / step size. Retry with fewer iterations.",
+  "rows": 46,
+  "target": "price",
+  "identical_prices": true,
+  "date_is_time": true,
+  "acf_checks": {
+    "рівні": {
+      "n": 46,
+      "peaks": [
+        [
+          9.0,
+          -0.1424270672975477
+        ],
+        [
+          15.0,
+          -0.323355842355642
+        ],
+        [
+          24.0,
+          0.22131538462082712
+        ],
+        [
+          34.0,
+          -0.029335362627516206
+        ],
+        [
+          39.0,
+          -0.03560293078497677
+        ]
+      ],
+      "widget_confidence_bound": 0.3360086331962061,
+      "significant_peak_lags": []
+    },
+    "різниця": {
+      "n": 45,
+      "peaks": [
+        [
+          12.0,
+          0.25473010056100615
+        ],
+        [
+          18.0,
+          -0.04877049732167246
+        ],
+        [
+          24.0,
+          0.3182351680455164
+        ],
+        [
+          36.0,
+          0.05603179724234054
+        ]
+      ],
+      "widget_confidence_bound": 0.33864584578807094,
+      "significant_peak_lags": []
+    }
+  },
+  "workflow": "потік_orange.ows",
+  "seasonal_initial_error": "variable date is not in domain",
+  "seasonal_workaround": "Python Script: same 46 prices without date metadata; Form Timeseries: monthly from 2014-03-01",
+  "screenshots": [
+    "11_потік.png",
+    "11_ряд.png",
+    "11_типи_даних.png",
+    "11_ціль_price.png",
+    "12_корелограма.png",
+    "12_корелограма_різниці.png",
+    "12_налаштування_сезонності.png",
+    "12_помилка_сезонності.png",
+    "12_сезонне_коригування.png",
+    "13_ARIMA_параметри.png",
+    "13_оцінювання.png",
+    "13_помилка_20_фолдів.png"
+  ]
+}

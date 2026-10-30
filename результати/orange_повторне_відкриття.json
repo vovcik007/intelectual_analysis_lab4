@@ -1,0 +1,19 @@
+{
+  "reloaded": true,
+  "nodes": 15,
+  "links": 15,
+  "out_of_sample_widget_row": {
+    "RMSE": "2.841",
+    "MAE": "1.196",
+    "MAPE": "0.373",
+    "POCID": "60.0",
+    "R²": "-0.538",
+    "AIC": "119.2",
+    "BIC": "122.8"
+  },
+  "seasonal_after_select_price_apply": true,
+  "user_actions": [
+    "Difference: select price",
+    "Seasonal Adjustment: select price and Apply"
+  ]
+}

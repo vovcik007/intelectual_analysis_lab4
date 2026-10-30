@@ -1,0 +1,37 @@
+# Local Python runtime and environments
+.venv/
+.python/
+.tools/
+.uv-cache/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local settings, history, authentication and caches
+.ipython/
+.jupyter/
+.orange/
+.mplconfig/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+
+# Editor recovery files and Office locks
+*.swp
+*.swp.*
+*.swo
+~$*
+*.tmp
+*.temp
+*.log
+Thumbs.db
+.DS_Store
+
+# Temporary report previews and the unrelated Lab 3 reference
+звіт_матеріали/
+Звіт_ЛР3_Лопатін_ШІ-31.pdf
+
+# Recreated by the notebook; the dependency is installed from requirements
+результати/orange_functions_встановлена_версія.py
